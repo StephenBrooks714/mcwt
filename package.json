@@ -26,6 +26,7 @@
     "express-session": "^1.18.0",
     "express-validator": "^7.0.1",
     "follow-redirects": "^1.15.3",
+    "heroku-cli": "^7.0.9",
     "jquery": "^3.7.1",
     "memory-cache": "^0.2.0",
     "mongoose": "^6.10.1",
