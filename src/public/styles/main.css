@@ -1,0 +1,587 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import "node_modules/open-props/normalize.min.css";
+@import "font-styles.css";
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+@media (max-width: 992px) {
+  .flex-row-reverse {
+    flex-direction: column;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-lg-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col-lg-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-10 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.col-lg-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+  padding: 0 15px;
+}
+@media (max-width: 1100px) {
+  .col-lg-2 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+@media (max-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .col-lg-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mt-4 {
+  margin-top: 2rem !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
+
+.mb-7 {
+  margin-bottom: 5rem !important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(244, 244, 244, 0.6) !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.list-group-items {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.list-group-items .list-item {
+  display: flex;
+  margin-bottom: 0.7rem;
+  align-items: center;
+  list-style: none;
+}
+.list-group-items .list-item i {
+  margin-right: 0.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+  font-family: "Raleway", sans-serif;
+}
+
+.card-img {
+  height: 210px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .card-img {
+    height: 420px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-primary:hover {
+  color: #0b5ed7;
+  background-color: #fff;
+  border-color: #0a58ca;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.btn-danger:hover {
+  color: #bb2d3b;
+  background-color: #fff;
+  border-color: #b02a37;
+}
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.btn-outline-dark {
+  color: #212529;
+  border-color: #212529;
+}
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+.btn-outline-light {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+.btn-outline-light:hover {
+  color: #000;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.delay-3 {
+  animation-delay: 0.9s;
+}
+
+.delay-4 {
+  animation-delay: 1.2s;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .nav-items {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar .nav-items .nav-item {
+  margin-right: 0.3rem;
+  display: inline-block;
+}
+.navbar .nav-items .nav-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.navbar .nav-items .nav-item a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+@media (max-width: 862px) {
+  .dark-nav {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  }
+}
+footer {
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+footer p {
+  margin: 0;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+.card-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.card-footer {
+  border-top: 1px solid #dee2e6;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-light-red {
+  background-color: #ff9999;
+}
+
+.bg-red-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(121, 9, 28) 35%, rgb(255, 0, 112) 100%);
+  color: white;
+}
+
+.home-bg {
+  background: linear-gradient(to bottom, rgba(121, 9, 28, 0.9), rgba(0, 0, 0, 0.5)), url("https://wallpaperaccess.com/full/4061963.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 180px;
+  padding-bottom: 110px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/image000001.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

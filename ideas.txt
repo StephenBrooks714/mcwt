@@ -1,0 +1,15 @@
+<section class="row align-items-center justify-content-center text-center mb-7">
+        <div class="col-lg-3 mb-3">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aperiam aspernatur corporis deleniti earum enim error illo in, iure maiores nisi odio odit praesentium quasi quo similique veniam voluptate.
+            </p>
+        </div>
+        <div class="col-lg-6 mb-3">
+            <img src="./src/public/assets/main-image.png" class="img-fluid" alt="section image">
+        </div>
+        <div class="col-lg-3 mb-3">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aperiam aspernatur corporis deleniti earum enim error illo in, iure maiores nisi odio odit praesentium quasi quo similique veniam voluptate.
+            </p>
+        </div>
+    </section>

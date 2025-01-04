@@ -1,0 +1,11 @@
+.navbar {
+  background-color: #ff9999;
+  padding: 1rem 0;
+}
+.navbar .social-media-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=navbar.css.map */
