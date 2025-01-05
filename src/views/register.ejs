@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body class="red-gradient">
+<header>
+    <%- include('layouts/navBar') -%>
+</header>
+
+<main class="container" style="margin-top: 150px; margin-bottom: 70px;">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-9">
+            <% if(errors != null && errors.length > 0) {%>
+                <ul class="list-group">
+                    <% for(var i = 0; i < errors.length; i++){ %>
+                        <li class="list-group-item list-group-item-danger">
+                            <%= errors[i] %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+            <h1 class="display-4 text-white fw-bold mb-2">Add A New Member</h1>
+            <p class="mb-4 text-white">Register a member for an account to have access, their role defines their actions.</p>
+            <form action="/store/user" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="username" class="form-label text-white">Username</label>
+                        <input type="text" name="username" required id="username" class="mb-3 form-control">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="role" class="form-label text-white">Their Role</label>
+                        <select name="role" id="role" class="form-control mb-3">
+                            <option value="" selected></option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="fName" class="form-label text-white">First Name</label>
+                        <input type="text" name="fName" required id="fName" class="mb-3 form-control">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="lName" class="form-label text-white">Last Name</label>
+                        <input type="text" name="lName" required id="lName" class="mb-3 form-control">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="email" class="form-label text-white">Email</label>
+                        <input type="email" name="email" required id="email" class="mb-3 form-control">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="password" class="form-label text-white">Password</label>
+                        <input type="password" name="password" required id="password" class="mb-3 form-control">
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="imageUrl" class="form-label text-white">Image Url</label>
+                        <input type="url" name="imageUrl" id="imageUrl" class="mb-3 form-control">
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="bio" class="form-label text-white">Bio</label>
+                        <textarea name="bio" id="bio" required class="form-control mb-3" rows="5"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-primary rounded-pill" type="submit">register new subscriber</button>
+            </form>
+        </div>
+    </div>
+</main>
+<%- include('layouts/footer') -%>
+
+</body>
+</html>

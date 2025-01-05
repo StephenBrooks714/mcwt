@@ -1,20 +1,108 @@
 <nav class="navbar social-media-btn-container dark-nav" id="navbar">
     <ul class="nav-items">
-        <li class="nav-item">
-            <a href="#">
+        <li class="nav-logo">
+            <a href="/">
                 <img src="/assets/logo.png" height="75" width="85" alt="logo">
             </a>
         </li>
+        <li class="nav-item item1">
+            <% if(!loggedIn) { %>
+                <a href="/login" class="nav-link">
+                    Login
+                </a>
+            <% } else { %>
+                <a href="/logout" class="nav-link">
+                    Logout
+                </a>
+                <a href="/admin" class="nav-link">
+                    Admin
+                </a>
+            <% } %>
+        </li>
     </ul>
     <ul class="nav-items">
-        <li class="nav-item">
+        <li class="nav-item item1">
+            <a href="" class="nav-link menu">About Us</a>
+            <ul class="submenu-1">
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item item1">
+            <a href="" class="nav-link">Involvement</a>
+            <ul class="submenu-2">
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+                <li>
+                    <a href="#!">Link Text</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item item1">
             <a href="https://www.facebook.com/share/g/1H5qtA2wDr/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item item1">
             <a href="https://www.eventbrite.com/o/shh-just-got-real-podcast-76684821313" target="_blank"><i class="fa-solid fa-e"></i></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item item1">
             <a href="https://www.youtube.com/channel/UCTzTMiCPk7pTzclmBFISS7w/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li class="dropdown">
+            <button class="dropbtn" onclick="showMenu()">menu</button>
+            <ul class="dropdown-items fadeInRight">
+                <button class="btn" onclick="closeMenu()">X</button>
+                <li class="dropdown-item">
+                    <img src="/assets/logo.png" height="80" width="80" alt="logo">
+                </li>
+                <li class="dropdown-item">
+                    <a href="#!">Link Anchor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#!">Link Anchor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#!">Link Anchor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#!">Link Anchor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#!">Link Anchor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#!">Link Anchor</a>
+                </li>
+                <hr>
+                <% if(!loggedIn) { %>
+                    <li class="dropdown-item">
+                        <a href="/login">Login</a>
+                    </li>
+                <% } else { %>
+                    <li class="dropdown-item">
+                        <a href="/">Admin Page</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/logout">Logout</a>
+                    </li>
+                <% } %>
+            </ul>
         </li>
     </ul>
 </nav>

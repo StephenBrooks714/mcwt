@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body class="bg-red-gradient">
+<header>
+    <%- include('layouts/navBar') -%>
+</header>
+
+<main class="container" style="margin-top: 160px; margin-bottom: 70px;">
+    <div class="row justify-content-center align-items-center flex-center text-center mb-6">
+        <div class="col-lg-10 mb-6">
+            <h1 class="fw-bold display-4">Admin Panel</h1>
+            <p class="lead">
+                Here you will have access to makes changes to live content.
+            </p>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Contact</p>
+                <p class="card-text">
+                    <a href="/newContact">Update</a> the contact form for messages to be sent.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Events</p>
+                <p class="card-text">
+                    Add an event for the website and visitors to see.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Gallery</p>
+                <p class="card-text">
+                    Add more images to your gallery, from you facebook.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Team</p>
+                <p class="card-text">
+                    <a href="/register">Add</a> a member. <br>
+                    <% for(i=0; i < users.length; i++) { %>
+                        <a href="/profile/<%= users[i]._id %>">
+                            <%= users[i].fName %>
+                        </a>
+                    <% } %>
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Content</p>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Content</p>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Content</p>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+            <div class="card">
+                <p class="card-header">Content</p>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row flex-row-reverse">
+        <div class="col-lg-6 mb-3">
+            <h2 class="h1 mb-2">Managing Your Content</h2>
+            <p class="mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur distinctio est inventore laborum sit tempora ullam. Ex pariatur quasi sint. Aperiam aspernatur consequatur eaque eos est fugiat itaque molestiae ratione.
+            </p>
+            <ul class="list-group-items">
+                <li class="list-item">
+                    Your content is original and copied from somewhere else
+                </li>
+                <li class="list-item">
+                    You upload content that is relatable to your business.
+                </li>
+                <li class="list-item">
+                    Only people that share your interest have access to update.
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6 mb-3">
+            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid shadow-lg" alt="Managing Your Content">
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+></script>
+</body>
+</html>

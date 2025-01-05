@@ -93,7 +93,7 @@
                     </div>
                     <h4 class="card-header">Soulmine</h4>
                     <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio hic ipsum modi.
+                        Providing Mental Health Therapists for events.
                     </p>
                     <p class="card-footer">
                         <a href="https://www.facebook.com/profile.php?id=100090814104807" target="_blank">
@@ -109,7 +109,7 @@
                     </div>
                     <h4 class="card-header">D.A.C.</h4>
                     <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio hic ipsum modi.
+                        Provides resources to support Mom Can We Talk.
                     </p>
                     <p class="card-footer">
                         <a href="https://www.dadsagainstcrime.org/" target="_blank">
@@ -125,7 +125,7 @@
                     </div>
                     <h4 class="card-header">Shh Got Real</h4>
                     <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio hic ipsum modi.
+                        The Host of this Podcast Host & Support MCWT
                     </p>
                     <p class="card-footer">
                         <a href="https://www.facebook.com/shitjustgotrealpod/about" target="_blank">
@@ -141,7 +141,7 @@
                     </div>
                     <h4 class="card-header">Chicken 'n' Pickle</h4>
                     <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio hic ipsum modi.
+                        Expanding their Community Involvement w/MCWT
                     </p>
                     <p class="card-footer">
                         <a href="https://chickennpickle.com/location/st-charles/" target="_blank">
@@ -160,23 +160,20 @@
                 </p>
                 <ul class="list-group-items">
                     <li class="list-item">
-                        <i class="fa-solid fa-check-double"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet.
+                        <i class="fa-solid fa-check-double"></i> Listen to our podcast for more news.
                     </li>
                     <li class="list-item">
-                        <i class="fa-solid fa-check-double"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet.
+                        <i class="fa-solid fa-check-double"></i> Help our organizational growth with Square.
                     </li>
                     <li class="list-item">
-                        <i class="fa-solid fa-check-double"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet.
+                        <i class="fa-solid fa-check-double"></i> Stay up-to-date with the latest news.
                     </li>
                 </ul>
             </div>
             <div class="col-lg-6 mb-3">
-                <form name="contact"
-                      method="POST"
-                      data-netlify-recaptcha="true"
-                      data-netlify="true">
+                <form action="/send/form" method="post" enctype="application/x-www-form-urlencoded">
                     <label for="email" class="form-label">Your Email</label>
-                    <input type="email" name="email" id="email" class="form-control mb-2" required />
+                    <input type="email" name="from" id="email" class="form-control mb-2" required />
                     <label for="phone" class="form-label">Your Phone</label>
                     <input type="text" name="phone" id="phone" class="form-control mb-2" required />
                     <label for="date" class="form-label">Scheduling</label>
@@ -192,7 +189,6 @@
 </main>
 
 <%- include('layouts/footer') -%>
-<!-- MDB -->
-<script type="text/javascript" src="/js/main.js"></script>
+
 </body>
 </html>

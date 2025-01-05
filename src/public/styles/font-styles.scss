@@ -22,24 +22,48 @@ p {
   font-size: 6rem;
   font-weight: 300;
   line-height: 1.2;
+  @media(max-width: 992px) {
+    font-size: 5.5rem;
+  }
+  @media(max-width: 862px) {
+    font-size: 4.5rem;
+  }
+  @media(max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
   line-height: 1.2;
+  @media(max-width: 992px) {
+    font-size: 3.5rem;
+  }
+  @media(max-width: 862px) {
+    font-size: 3rem;
+  }
+  @media(max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .display-3 {
   font-size: 4.5rem;
   font-weight: 300;
   line-height: 1.2;
+  @media(max-width: 768px) {
+    font-size: 3.5rem;
+  }
 }
 
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
+  @media(max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .h1 {
