@@ -1,0 +1,60 @@
+Event Brite
+API_KEY=CNQU6R6OTRLVNHOWX4
+CLIENT_SECRET=LM327WYIW3BSEEWNSJVIZVQCG67OXSKBEEMFDFR6B26SXOQA2C
+PRIVATE_TOKEN=7ODZ6GTTFOLFSSNG3E4E
+PUBLIC_TOKEN=RKVYZYY46PHSIJMOULOW
+DOMAIN=www.eventbrite.com
+REDIRECT_URI=https://www.eventbrite.com/oauth/authorize?response_type=code&client_id=YOUR_API_KEY&redirect_uri=YOUR_REDIRECT_URI
+
+client side app
+https://www.eventbrite.com/oauth/authorize?response_type=token&client_id=YOUR_APP_KEY&redirect_uri=YOUR_URL
+
+server side app
+https://www.eventbrite.com/oauth/authorize?response_type=code&client_id=YOUR_APP_KEY
+
+////////////////////////
+
+ try {
+     var decodedToken = jwt.verify(query.esr, CLIENT_SECRET);
+ } catch (e) {
+     // handle error
+ }
+
+ ## js html tag
+ <script src="https://ebmedia.eventbrite.com/s3-build/26869-rc2015-01-26-a5d995d/django/js/src/plugins/api.js"></script>
+ Once your app is ready, it should call init() to signal to the container:
+
+ EB.FrameAPI.init();
+ This informs the container that your app is ready and rendered so it can properly size the iframe and show it to the user.
+
+ Later, if you change your content and require a re-render, you should call EB.FrameAPI.resize() which informs the container of a need to attempt to resize the iframe.
+
+ Likewise, your app can be informed when the container is attempting to resize (due to the user changing sizes or orientations for example) by listening for events by passing a callback to init():
+
+ EB.FrameAPI.init({
+     callback: function(event) {
+         ...
+     }
+ })
+
+ //////////////////////////////////////
+ https://www.eventbrite.co.uk/platform/docs/create-events
+ creating new event
+
+ curl -X POST   https://www.eventbriteapi.com/v3/organizations/{organization_id}/events/   -H 'Authorization: Bearer PERSONAL_OAUTH_TOKEN'   -H "Accept: application/json"
+   -d '{
+         "event": {
+             "name": {
+                 "html": "My New Event"
+             },
+             "start":{
+                 "timezone": "America/Los_Angeles",
+                 "utc": "2019-12-01T02:00:00Z"
+             },
+             "end":{
+                 "timezone": "America/Los_Angeles",
+                 "utc": "2019-12-01T05:00:00Z"
+             },
+             "currency": "USD"
+         }
+     }'

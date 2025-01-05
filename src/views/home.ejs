@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<style>
+    .bg-coming-soon {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2023/05/08/13/24/laptop-7978588_1280.jpg')
+        no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+</style>
+<body class="bg-coming-soon">
+
+<main class="container">
+    <div class="row justify-content-center align-items-center"
+         style="height: 100vh;">
+        <div class="col-lg-5">
+            <div class="card">
+                <h1 class="cursive display-4 fw-bold">Mom Can We Talk</h1>
+                <p class="text-muted">
+                    We truly believe that IT TAKES A VILLAGE!! With the Community's support, we can make a meaningful impact on the lives of the youth in our community.
+                </p>
+                <hr style="margin-top: 14px; margin-bottom: 14px;">
+                <h4 class="mb-1">Coming Soon</h4>
+                <p class="mb-3 text-muted">Check back soon for updates!</p>
+                <form action="/send/form" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" name="from" id="email" class="form-control mb-2" required />
+                        <label for="phone" class="form-label">Your Phone</label>
+                        <input type="text" name="phone" id="phone" class="form-control mb-2" required />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" onclick="alert('Your message has been sent!')" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- MDB -->
+</body>
+</html>

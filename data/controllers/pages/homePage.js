@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-    res.render("index", {
+    res.render("home", {
         title: "Mom Can We Talk",
     })
 }
