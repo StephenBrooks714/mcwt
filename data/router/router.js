@@ -3,6 +3,7 @@ const router = express.Router();
 const cache = require("./config/cache");
 
 const homeController = require('../controllers/pages/homePage');
+const aboutController = require('../controllers/pages/aboutPage');
 // users
 const registerController = require('../controllers/users/registerPage');
 const loginUserController = require('../controllers/users/loginUser');
@@ -24,6 +25,7 @@ const sendContactFormController = require('../controllers/forms/sendContactForm'
 let auth = require("./middleware/ifAdminUser");
 
 router.get('/', cache(2), homeController);
+router.get("/about", cache(2), aboutController);
 // users
 router.get('/register', registerController);
 router.post('/store/user', storeUserController);
