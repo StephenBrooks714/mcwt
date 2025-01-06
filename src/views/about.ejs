@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('layouts/header') -%>
+<style>
+    .about-bg {
+        background: linear-gradient(to top, rgba(244, 244, 244, 0.3), rgba(0, 0, 0, 0.6)),
+        url("/assets/img_3323.jpg") no-repeat center center fixed;
+        background-size: cover;
+        width: 100%;
+        height: 70vh;
+    }
+</style>
 <body class="bg-red-gradient">
 <header class="about-bg">
-    <%- include('layouts/navBar') -%>
+    <%- include('layouts/navBar2') -%>
     <section class="container">
         <div class="row justify-content-center align-items-center text-center"
-             style="height: 70vh;">
-            <div class="col-lg-8">
+             style="height: 80vh;">
+            <div class="col-lg-7">
                 <h1 class="cursive text-white display-2 fadeInDown fw-bold">About MCWT</h1>
                 <p class="fadeInLeft delay-1">
                     Listen to our podcast and stay informed on the news that you want to hear.
@@ -18,6 +27,20 @@
 </header>
 
 <main class="container my-5 py-5">
+    <article class="row mb-6">
+        <div class="col-lg-6 mb-3">
+            <h2>Mission Statement:</h2>
+            <p class="h6">
+                To provide a safe platform for youth to share their stories and challenges, particularly those related to their upbringing, school life, and home environment. Through community collaboration and support, we aim to foster open dialogue, build empathy, and provide resources to help them overcome personal and societal struggles.
+            </p>
+        </div>
+        <div class="col-lg-6 mb-3">
+            <h2>Vision Statement:</h2>
+            <p class="h6">
+                To create an ongoing, accessible platform for youth to discuss their challenges and receive guidance, resources, and support from adults who have overcome similar struggles. Through events, after-school programs, and digital tools like the upcoming Mom Can We Talk App! We aim to make lasting impacts in the lives of young people in underserved communities.
+            </p>
+        </div>
+    </article>
     <div class="row justify-content-center align-items-center mb-6">
         <div class="col-lg-12 mb-4">
             <h2 class="h1">Our Hard-Working Team</h2>
@@ -63,21 +86,21 @@
         <div class="col-lg-4 mb-3">
             <h3 class="h3">Started In 2012</h3>
             <hr style="width: 140px; margin-top: 10px; margin-bottom: 10px;">
-            <p class="fw-light">
+            <p class="fw-light h6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ipsa obcaecati omnis praesentium quasi, quis rerum? Assumenda cum dolor error et ipsum quaerat quis reprehenderit saepe sapiente vitae. Incidunt, qui?
             </p>
         </div>
         <div class="col-lg-4 mb-3">
             <h3 class="h3">Continued In 2017</h3>
             <hr style="width: 140px; margin-top: 10px; margin-bottom: 10px;">
-            <p class="fw-light">
+            <p class="fw-light h6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ipsa obcaecati omnis praesentium quasi, quis rerum? Assumenda cum dolor error et ipsum quaerat quis reprehenderit saepe sapiente vitae. Incidunt, qui?
             </p>
         </div>
         <div class="col-lg-4 mb-3">
             <h3 class="h3">Currently In 2025</h3>
             <hr style="width: 140px; margin-top: 10px; margin-bottom: 10px;">
-            <p class="fw-light">
+            <p class="fw-light h6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ipsa obcaecati omnis praesentium quasi, quis rerum? Assumenda cum dolor error et ipsum quaerat quis reprehenderit saepe sapiente vitae. Incidunt, qui?
             </p>
         </div>
@@ -87,9 +110,6 @@
 <%- include('layouts/footer') -%>
 
 <!-- MDB -->
-<script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
-></script>
+
 </body>
 </html>
