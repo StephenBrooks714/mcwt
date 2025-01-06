@@ -8,7 +8,10 @@ const EventsSchema = new Schema ({
         ref: 'Users',
         required: true
     },
-    imageUrl: String,
+    startDate: String,
+    endDate: String,
+    startTime: String,
+    endTime: String,
     eventUrl: String,
     description: String,
     datePosted:{

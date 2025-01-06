@@ -20,6 +20,11 @@ const newContactFormController = require('../controllers/forms/newCintactPage');
 const storeContactFormController = require('../controllers/forms/storeContactForm');
 const deleteContactController = require('../controllers/forms/deleteContactInfo');
 const sendContactFormController = require('../controllers/forms/sendContactForm');
+// events
+const newEventFormController = require('../controllers/pages/newEventPage');
+const storeEventController = require('../controllers/pages/storeEventData');
+const eventsController = require('../controllers/pages/eventsPage');
+const deleteEventController = require('../controllers/pages/deleteEventData');
 
 // middleware
 let auth = require("./middleware/ifAdminUser");
@@ -42,5 +47,10 @@ router.get('/newContact', newContactFormController);
 router.post('/store/contact', storeContactFormController);
 router.get('/delete/contact/:id', deleteContactController);
 router.post("/send/form", sendContactFormController);
+//events
+router.get("/newEvent", auth, newEventFormController);
+router.post("/store/event", storeEventController);
+router.get("/delete/event/:id", deleteEventController);
+router.get("/events", cache(2), eventsController);
 
 module.exports = router
