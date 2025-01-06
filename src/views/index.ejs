@@ -94,6 +94,34 @@
         </div>
     </section>
     <div class="container my-4">
+        <% if(eventsData != "") { %>
+        <div class="row justify-content-center mb-6">
+            <% for(i=0; i < eventsData.length; i++) { %>
+                <div class="col-lg-7 mb-3">
+                    <h4 class="card-title mb-3"><%= eventsData[i].title %>
+                        <% if(loggedIn) { %>
+                            <a href="/delete/event/<%= eventsData[i]._id %>" class="btn btn-floating btn-danger">
+                                <i class="far fa-trash-can"></i>
+                            </a>
+                        <% } %>
+                    </h4>
+                    <p class="mb-3 card-text"><%= eventsData[i].description.substring(0, 140) %></p>
+                    <p class="mb-3 card-footer">
+                        <strong>Start Date</strong> <%= eventsData[i].startDate %> on <%= eventsData[i].startTime %>
+                        <br>
+                        <strong>End Date</strong> <%= eventsData[i].endDate %> on <%= eventsData[i].endTime %>
+                    </p>
+                    <a href="<%= eventsData[i].eventUrl %>" class="btn btn-primary" target="_blank">
+                        Go To Event
+                    </a>
+                    <a href="/events" class="btn btn-outline-warning">Previous Events</a>
+                </div>
+                <div class="col-lg-5 mb-3">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="events">
+                </div>
+            <% } %>
+        </div>
+        <% } %>
         <div id="contact"></div>
         <div class="row mb-6 justify-content-center">
             <div class="col-lg-6 mb-2">
