@@ -33,6 +33,8 @@ const deleteGalleryController = require('../controllers/pages/deleteImage');
 // privacy policy and terms pages
 const privacyPolicyController = require('../controllers/pages/privacyPolicyPage');
 const termsController = require('../controllers/pages/termsPage');
+// sponsorship
+const sponsorController = require('../controllers/pages/sponsorPage');
 
 // middleware
 let auth = require("./middleware/ifAdminUser");
@@ -68,5 +70,7 @@ router.get("/gallery", cache(2), galleryController);
 // privacy policy and terms pages
 router.get("/privacyPolicy", privacyPolicyController);
 router.get("/terms", termsController);
+// sponsorship
+router.get("/sponsor", sponsorController);
 
 module.exports = router
