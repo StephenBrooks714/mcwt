@@ -25,6 +25,14 @@ const newEventFormController = require('../controllers/pages/newEventPage');
 const storeEventController = require('../controllers/pages/storeEventData');
 const eventsController = require('../controllers/pages/eventsPage');
 const deleteEventController = require('../controllers/pages/deleteEventData');
+// gallery
+const newGalleryController = require('../controllers/pages/newGalleryPage');
+const storeGalleryController = require('../controllers/pages/storeImages');
+const galleryController = require('../controllers/pages/gallleryPage');
+const deleteGalleryController = require('../controllers/pages/deleteImage');
+// privacy policy and terms pages
+const privacyPolicyController = require('../controllers/pages/privacyPolicyPage');
+const termsController = require('../controllers/pages/termsPage');
 
 // middleware
 let auth = require("./middleware/ifAdminUser");
@@ -52,5 +60,13 @@ router.get("/newEvent", auth, newEventFormController);
 router.post("/store/event", storeEventController);
 router.get("/delete/event/:id", deleteEventController);
 router.get("/events", cache(2), eventsController);
+// gallery
+router.get("/newImages", auth, newGalleryController);
+router.post("/store/gallery", storeGalleryController);
+router.get("/delete/gallery/:id", deleteGalleryController);
+router.get("/gallery", cache(2), galleryController);
+// privacy policy and terms pages
+router.get("/privacyPolicy", privacyPolicyController);
+router.get("/terms", termsController);
 
 module.exports = router

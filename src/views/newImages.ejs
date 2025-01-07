@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body class="bg-red-gradient">
+<header>
+    <%- include('layouts/navbar2') -%>
+</header>
+
+<main>
+    <div class="container" style="margin-top: 200px; margin-bottom: 110px;">
+        <section class="row align-items-center justify-content-center mb-6">
+            <div class="col-lg-12 text-center mb-2">
+                <h1 class="h1 fw-bold">Add More Images</h1>
+                <hr class="line">
+                <p class="h6">
+                    Copy and paste your image links here. Recommended ones are Facebook, Instagram, and Twitter.
+                </p>
+            </div>
+            <div class="col-lg-8">
+                <form action="/store/gallery" method="post" enctype="multipart/form-data">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8 mb-4">
+                            <div class="featureProgramList">
+                                <div class="featureProgramDiv">
+                                    <input type="url" placeholder="Image Url" name="imageUrl" id="jobDescription" class="mb-2 form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <button type="button" class="btn btn-primary" id="addProgramFeature">Add Image</button>
+                        </div>
+                        <div class="col-lg-12">
+                            <button class="btn btn-outline-light" type="submit">submit</button>
+                        </div>
+                    </div>
+                </form>
+                <script>
+                    let addProgramFeature = document.getElementById("addProgramFeature");
+                    let featureProgramList = document.querySelector(".featureProgramList");
+                    let featureProgramDiv = document.querySelectorAll(".featureProgramDiv")[0];
+
+                    addProgramFeature.addEventListener('click', function(){
+                        let newProgramFeature = featureProgramDiv.cloneNode(true);
+                        let input = newProgramFeature.getElementsByTagName('input')[0];
+                        input.value = "";
+                        featureProgramList.appendChild(newProgramFeature)
+                    })
+                    let addFileFeature = document.getElementById("addFileFeature");
+                    let fileProgramList = document.querySelector(".fileProgramList");
+                    let fileProgramDiv = document.querySelectorAll(".fileProgramDiv")[0];
+
+                    addFileFeature.addEventListener('click', function(){
+                        let newFileFeature = fileProgramDiv.cloneNode(true);
+                        let input = newFileFeature.getElementsByTagName('input')[0];
+                        input.value = "";
+                        fileProgramList.appendChild(newFileFeature)
+                    })
+                </script>
+            </div>
+        </section>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+</body>
+</html>

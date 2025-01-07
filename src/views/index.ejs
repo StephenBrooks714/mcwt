@@ -9,8 +9,17 @@
         <section class="row align-items-center justify-content-center align-items-center">
             <div class="col-lg-10">
                 <h1 class="cursive text-dark-red fadeInDown">Mom Can We Talk</h1>
-                <p class="text-white fadeInLeft delay-1 lead mb-3">
+                <p class="text-white fadeInLeft delay-1 lead mb-2">
                     We truly believe that IT TAKES A VILLAGE!! With the Community's support, we can make a meaningful impact on the lives of the youth in our community.
+                </p>
+                <p class="mb-3">
+                    <span class="h5 mr-3">Follow Us On:</span>
+                    <a href="https://www.youtube.com/watch?v=wRNsNgHHeQU" target="_blank" class="text-white mr-3">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/shitjustgotrealpod/" target="_blank" class="text-white mr-3">
+                        <i class="fab fa-facebook"></i>
+                    </a>
                 </p>
                 <a href="https://app.frame.io/reviews/6ef12aca-2c21-4286-926c-8e0dd774f3ba/fcedca44-c9b6-45eb-a739-b5df89d872ed"
                    target="_blank" class="btn fadeInUp delay-2 btn-danger">Listen To Our Show</a>
@@ -100,7 +109,7 @@
                 <div class="col-lg-7 mb-3">
                     <h4 class="card-title mb-3"><%= eventsData[i].title %>
                         <% if(loggedIn) { %>
-                            <a href="/delete/event/<%= eventsData[i]._id %>" class="btn btn-floating btn-danger">
+                            <a href="/delete/event/<%= eventsData[i]._id %>" class="btn btn-floating btn-warning">
                                 <i class="far fa-trash-can"></i>
                             </a>
                         <% } %>
@@ -111,10 +120,10 @@
                         <br>
                         <strong>End Date</strong> <%= eventsData[i].endDate %> on <%= eventsData[i].endTime %>
                     </p>
-                    <a href="<%= eventsData[i].eventUrl %>" class="btn btn-primary" target="_blank">
-                        Go To Event
+                    <a href="/events" class="btn btn-primary" target="_blank">
+                        Learn More
                     </a>
-                    <a href="/events" class="btn btn-outline-warning">Previous Events</a>
+                    <a href="/events" class="btn btn-outline-info">Previous Events</a>
                 </div>
                 <div class="col-lg-5 mb-3">
                     <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="events">

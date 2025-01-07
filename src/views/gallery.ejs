@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<style>
+    .gallery-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://cdn.pixabay.com/photo/2023/05/08/13/24/laptop-7978588_1280.jpg')
+        no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 50vh;
+        width: 100%;
+    }
+</style>
+<body class="bg-red-gradient">
+<header class="gallery-bg">
+    <%- include('layouts/navBar2') -%>
+    <main class="container ">
+        <div class="row justify-content-center align-items-center text-center"
+             style="height: 60vh;">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold">MCWT Photo Gallery</h1>
+            </div>
+        </div>
+    </main>
+</header>
+
+<main class="container my-5">
+    <div class="row justify-content-center align-items-center text-center">
+        <% for(i=0; i < galleryData.length; i++) { %>
+            <div class="col-lg-4">
+                <img src="<%= galleryData[i].imageUrl %>" alt="gallery image"
+                     class="img-fluid rounded-3" style="height: 300px; width: 100%;">
+            </div>
+        <% } %>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+<!-- MDB -->
+</body>
+</html>
