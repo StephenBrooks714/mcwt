@@ -8,69 +8,35 @@
 
 <main class="container my-5 py-5">
     <div class="row justify-content-center align-items-center mb-6">
-        <div class="col-lg-8 text-center">
-            <h1>Getting Sponsored</h1>
+        <div class="col-lg-10 text-center">
+            <h1 class="mb-3 fw-bold">Getting Sponsored</h1>
+            <p class="text-white">
+                Here you can apply to be a sponsor of the website and our show. Your funds will help us
+                to continue our podcast that everyone loves and wants to hear.
+            </p>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-lg-6 mb-3">
-            <div class="card">
-                <p class="card-text">
-                    <strong>Thanks Mom - $2500</strong> <br>
-
-                    <h6>
-                    FRONT VENDOR TABLE AT EVENT
-
-                    ADVERTISEMENT ON FACEBOOK UP UNTIL THE EVENT
-
-                    LOGO RECOGNITION IN ALL MARKETING MATERIALS PROMOTING EVENT
-
-                    STAGE SPONSORSHIP – SIGNAGE ON THE MAIN STAGE
-
-                    EXCLUSIVE SOCIAL MEDIA SHOUT-OUT
-                </h6>
-                </p>
+        <% for(i=0; i < sponsored.length; i++) { %>
+            <div class="col-lg-6 mb-3">
+                <div class="card hover-zoom">
+                    <div class="card-header-pills">
+                        <a href="<%= sponsored[i].webUrl %>">
+                            <img src="<%= sponsored[i].imageUrl %>" class="card-img-top" alt="..." style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><%= sponsored[i].title %></h4>
+                        <p class="card-text">
+                            <%= sponsored[i].description %>
+                        </p>
+                        <p class="card-footer">
+                            <a href="<%= sponsored[i].link %>" class="btn btn-primary">Apply Now</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6 mb-3">
-            <div class="card">
-                <p class="card-text">
-                    <strong>YOU’RE FINALLY LISTENING - $1500</strong> <br>
-
-                    <h6>
-                    LOGO RECOGNITION IN ALL MARKETING MATERIALS PROMOTING EVENT
-
-                    STAGE SPONSORSHIP – SIGNAGE ON THE MAIN STAGE
-
-                    EXCLUSIVE SOCIAL MEDIA SHOUT-OUT
-                </h6>
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-6 mb-3">
-            <div class="card">
-                <p class="card-text">
-                    <strong>CAN YOU HEAR ME NOW - $1000</strong> <br>
-
-                    <h6>
-                    STAGE SPONSORSHIP – SIGNAGE ON THE MAIN STAGE
-
-                    EXCLUSIVE SOCIAL MEDIA SHOUT-OUT
-                </h6>
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-6 mb-3">
-            <div class="card">
-                <p class="card-text">
-                    <strong>MOM/DAD YOU’RE NOT LISTENING - $500</strong> <br>
-
-                    <h6>
-                    EXCLUSIVE SOCIAL MEDIA SHOUT-OUT
-                </h6>
-                </p>
-            </div>
-        </div>
+        <% } %>
     </div>
 </main>
 

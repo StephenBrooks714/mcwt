@@ -34,7 +34,10 @@ const deleteGalleryController = require('../controllers/pages/deleteImage');
 const privacyPolicyController = require('../controllers/pages/privacyPolicyPage');
 const termsController = require('../controllers/pages/termsPage');
 // sponsorship
-const sponsorController = require('../controllers/pages/sponsorPage');
+const newSponsorController = require('../controllers/sponsors/newSponsorPage');
+const storeSponsorController = require('../controllers/sponsors/storeSponsor');
+const deleteSponsorController = require('../controllers/sponsors/deleteSponsor');
+const sponsorController = require('../controllers/sponsors/sponsorPage');
 
 // middleware
 let auth = require("./middleware/ifAdminUser");
@@ -71,6 +74,9 @@ router.get("/gallery", cache(2), galleryController);
 router.get("/privacyPolicy", privacyPolicyController);
 router.get("/terms", termsController);
 // sponsorship
+router.get("/newSponsor", auth, newSponsorController);
+router.post("/store/sponsor", storeSponsorController);
+router.get("/delete/sponsor/:id", deleteSponsorController);
 router.get("/sponsor", sponsorController);
 
 module.exports = router
