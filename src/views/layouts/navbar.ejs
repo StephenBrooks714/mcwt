@@ -1,0 +1,107 @@
+<nav class="mb-5 p-4">
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" height="65" width="85" alt="">
+                </a>
+            </div>
+            <div class="col-auto hide-link">
+                <a class="btn btn-danger btn-sm rounded-pill" href="/">Home</a>
+            </div>
+            <div class="col-auto hide-link">
+                <a class="btn btn-danger btn-sm rounded-pill dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About Us
+                </a>
+                <div class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="/about">
+                            Our Team
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item" href="/sponsors">Sponsorship</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/blogs">FB Blogs</a></li>
+                </div>
+            </div>
+            <div class="col-auto hide-link">
+                <a class="btn btn-danger btn-sm rounded-pill dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Involvement
+                </a>
+                <div class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="/events">
+                            Our Events
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Our App <i class="bi bi-android"></i></a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/sponsors">Sponsorship</a></li>
+                </div>
+            </div>
+            <div class="col-auto hide-link">
+                <% if(!loggedIn) { %>
+                    <a class="btn btn-danger btn-sm rounded-pill" href="/login">User Login</a>
+                <% } else { %>
+                    <a class="btn btn-danger btn-sm rounded-pill dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Members
+                    </a>
+                    <div class="dropdown-menu">
+                        <li>
+                           <a class="dropdown-item" href="/dashboard">
+                               Dashboard
+                           </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sponsorship</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                    </div>
+                <% } %>
+            </div>
+            <div class="col-auto hide-link">
+                <a class="btn btn-danger btn-sm rounded-pill" href="/contact">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="sideNav">
+    <div class="side-middle-nav">
+        <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Mom Can We Talk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <a href="/" class="nav-link">Home Page</a>
+                    <a href="/about" class="nav-link">About Page</a>
+                    <a href="/blogs" class="nav-link">Facebook Blogs</a>
+                    <a href="/contact" class="nav-link">Contact Page</a>
+                    <a href="/sponsors" class="nav-link">Sponsor Page</a>
+                    <a href="/events" class="nav-link">Events Page</a>
+                    <hr>
+                    <a href="#!" class="nav-link">Donwload App</a>
+                </div>
+                <% if(loggedIn) { %>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Members
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                <% } else { %>
+                    <a href="/login" class="nav-link">User Login</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

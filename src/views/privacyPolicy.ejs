@@ -1,13 +1,75 @@
 <!doctype html>
-<html lang="en">
-<%- include('layouts/header') -%>
-<body class="bg-red-gradient">
-
-<!--header and navbar-->
-<header class="mb-8">
-    <!-- Navbar -->
-    <%- include('layouts/navbar2') -%>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../public/styles/buttons.css">
+    <link rel="stylesheet" href="../public/styles/nav.css">
+</head>
+<body style="background-color: black;">
+<header>
+    <nav class="mb-3 p-4">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto">
+                    <a class="navbar-brand" href="#">
+                        <img src="../public/images/logo.png" height="65" width="85" alt="">
+                    </a>
+                </div>
+                <div class="col-auto hide-link">
+                    <a class="btn btn-danger btn-sm rounded-pill" href="index.ejs">Home</a>
+                </div>
+                <div class="col-auto hide-link">
+                    <a class="btn btn-danger btn-sm rounded-pill" href="about.ejs">About</a>
+                </div>
+                <div class="col-auto hide-link">
+                    <a class="btn btn-danger btn-sm rounded-pill" href="#">Our App <i class="bi bi-android"></i> </a>
+                </div>
+                <div class="col-auto hide-link">
+                    <a class="btn btn-danger btn-sm rounded-pill" href="sponsors.ejs">Sponsor Us</a>
+                </div>
+                <div class="col-auto hide-link">
+                    <a class="btn btn-danger btn-sm rounded-pill" href="contact.ejs">Contact Us</a>
+                </div>
+                <div class="col-auto hide-link">
+                    <a class="btn btn-danger btn-sm rounded-pill" href="#">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>
+<div id="sideNav">
+    <div class="side-middle-nav">
+        <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <main class="container my-5 py-5">
     <section class="row justify-content-center align-items-center">
@@ -111,8 +173,42 @@
         </div>
     </section>
 </main>
-<!-- MDB -->
 
-<%- include('layouts/footer') -%>
+<footer class="bg-dark p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../public/images/logo.png" height="45" width="65" alt="logo">
+                <p>
+                    We truly believe that IT TAKES A VILLAGE!! With the Community's support, we can make a meaningful impact on the lives of the youth in our community.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h4>Our Directoy</h4>
+                <ul>
+                    <li>Home Page</li>
+                    <li>About MCWT</li>
+                    <li>Get Our App</li>
+                    <li>Sponsor Us</li>
+                    <li>Opportunity</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Follow Our Show</h4>
+                <img src="../public/images/amazon_music.svg" alt="amazon music" class="me-1" height="30" width="30">
+                <img src="../public/images/iheartradio.svg" alt="amazon music" class="me-1" height="30" width="30">
+                <img src="../public/images/spotify.svg" alt="amazon music" class="me-1" height="30" width="30">
+                <img src="../public/images/youtube.svg" alt="amazon music" class="me-1" height="30" width="30">
+                <hr>
+                <a href="privacyPolicy.html" class="text-decoration-none text-white">Privacy Policy</a>
+                <br>
+                <a href="termsConditions.ejs" class="text-decoration-none text-white">Terms and Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="../public/js/styles.js"></script>
 </body>
 </html>

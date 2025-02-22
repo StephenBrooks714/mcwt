@@ -29,6 +29,9 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 1;
 
 app.use(cors());
 app.use(express.static(path.join(__dirname,('src/public'))))
+app.use(express.static(path.join(__dirname,('node_modules/bootstrap/dist/css'))))
+app.use(express.static(path.join(__dirname,('node_modules/bootstrap/dist/js'))))
+app.use(express.static(path.join(__dirname,('node_modules/bootstrap-icons/font'))))
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));

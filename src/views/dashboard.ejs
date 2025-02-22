@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<%- include("layouts/header") -%>
+<body style="background-color: black;">
+
+<div class="row">
+    <div class="col-2 text-center">
+        <header>
+            <%- include("layouts/adminNav") -%>
+        </header>
+    </div>
+    <div class="col-10">
+        <div class="container-fluid my-3">
+            <h1 class="h4 mb-5 fw-bold">MCWT Dashboard</h1>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card bg-light text-dark p-2">
+                        <p>
+                            <a href="/register">Add more</a> admin to help manage your content
+                        </p>
+                        <p>
+                            Interested in seeing how the website performs? Create a Google <a href="https://analytics.google.com/analytics/web/?authuser=0#/provision/create">Analytics</a> account.
+                        </p>
+                        <p>
+                            Want to use a service for email campaigns? try out <a href="https://mailchimp.com/landers/email-marketing-platform/?ds_c=DEPT_AOC_Bing_Search_US_EN_Brand_Acquire_Omega_MKAG_US&ds_kids=p68888908946&ds_a_lid=kwd-77928250435278:loc-190&ds_cid=71700000090259731&ds_agid=58700007627232567&&msclkid=eccacb7ac06910446815acf2da28cabb&gclid=eccacb7ac06910446815acf2da28cabb&gclsrc=3p.ds#9SbDOATJ6zpaaD9zVgvgh" class="text-decoration-underline" target="_blank">MailChimp</a>.
+                        </p>
+                        <p>
+                            Send referrals to <a href="https://steveswebdesigns.com/" target="_blank">Stephen</a> to help someone else with their website needs. Referral discounted price is $99 for the website, and the domain cost yearly.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card p-2">
+                        <p>
+                            <a href="https://www.eventbrite.com/?irclickid=SdES8RVhXxyKUA1QQy3Y1S2yUks0-wxmlwbaSU0&sharedid=search.yahoo.com&irpid=10078&utm_source=impact&utm_medium=ebaf&utm_campaign=afsp_ceal_pmk_fpp_0_us_0_0_bau_0&utm_term=10078&utm_content=1818731__search.yahoo.com&irgwc=1" target="_blank">Add</a> An Event
+                        </p>
+                        <p>
+                            Add A Sponsor
+                        </p>
+                        <p>
+                            <a href="mailto:stephenbrooks714@gmail.com">Request</a> An Update
+                        </p>
+                        <p>
+                            <a href="/profiles">View</a> All Members
+                        </p>
+                        <p>
+                            <a href="/newFlyerPost">Add</a> a flyer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card p-2">
+                        <p>
+                            <a href="https://r.search.yahoo.com/_ylt=AwrhbpOMd4ln9QEAhhdXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1738271884/RO=10/RU=https%3a%2f%2fwww.facebook.com%2f/RK=2/RS=8pWibBqpZIdbwJu2HcNr2yUI47A-" target="_blank">Add</a> A Blog
+                        </p>
+                        <p>
+                            <a href="https://r.search.yahoo.com/_ylt=AwrhbpOMd4ln9QEAhhdXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1738271884/RO=10/RU=https%3a%2f%2fwww.facebook.com%2f/RK=2/RS=8pWibBqpZIdbwJu2HcNr2yUI47A-" target="_blank">Add</a> A Facebook Livestream
+                        </p>
+                        <p>
+                            <a href="https://www.ecwid.com/?irclickid=3mOx90VX0xyKUA1QQy3Y1S2yUks08JwPlwbaSU0&sharedid=search.yahoo.com&irpid=10078&irgwc=1" target="_blank">Add</a>
+                            an online store
+                        </p>
+                        <p>
+                            <a href="#!">Update</a> Form Contact
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-2">
+                        <h4>Available Flyers</h4>
+                        <% for(i=0; i < flyerPost.length; i++) { %>
+
+                            <% flyerPost[i].title.forEach(function(title, flyer){ %>
+                                <li class="list-group-item">
+                                    <p>
+                                        <a href="<%= flyer %>" download="<%= flyer %>" class="btn"><%= title %></a>
+                                    </p>
+                                </li>
+                            <% }) %>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/js/styles.js"></script>
+</body>
+</html>

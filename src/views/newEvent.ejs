@@ -1,69 +1,56 @@
 <!doctype html>
-<html lang="en">
-<%- include('layouts/header') -%>
-<body class="bg-red-gradient">
+<html lang="en" data-bs-theme="dark">
+<%- include("layouts/header") -%>
+
+<body style="background-color: black;">
 <header>
-    <%- include('layouts/navbar') -%>
+    <%- include("layouts/navbar") -%>
 </header>
 
-<main>
-    <div class="container" style="margin-top: 180px; margin-bottom: 110px;">
-        <section class="row justify-content-center">
-            <div class="col-lg-10 mb-2">
-                <h1 class="h1 mb-3">Add An Event</h1>
-                <form action="/store/event" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-lg-6 mb-2">
-                            <div class="form-group">
-                                <label for="eventName">Event Name</label>
-                                <input type="text" name="title" id="eventName" class="form-control mb-2" required />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-2">
-                            <div class="form-group">
-                                <label for="eventUrl">Event Url</label>
-                                <input type="url" name="eventUrl" id="eventUrl" class="form-control mb-2" required />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-2">
-                            <div class="form-group">
-                                <label for="startDate">Start Date</label>
-                                <input type="text" name="startDate" id="startDate" class="form-control mb-2" required />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-2">
-                            <div class="form-group">
-                                <label for="startTime">Start Time</label>
-                                <input type="text" name="startTime" id="startTime" class="form-control mb-2" required />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-2">
-                            <div class="form-group">
-                                <label for="endDate">End Date</label>
-                                <input type="text" name="endDate" id="endDate" class="form-control mb-2" required />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-2">
-                            <div class="form-group">
-                                <label for="endTime">End Time</label>
-                                <input type="text" name="endTime" id="endTime" class="form-control mb-2" required />
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="description" class="form-label">Description</label>
-                                <textarea name="description" id="description" class="form-control mb-3" rows="5"></textarea>
-                                <button class="btn btn-outline-light" type="submit">upload the event</button>
-                            </div>
-                        </div>
+
+<main class="container" style="margin-bottom: 80px; margin-top: 40px;">
+    <div class="row justify-content-center align-items-center mb-6">
+        <div class="col-lg-10">
+
+            <form action="/store/event" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Title</label>
+                        <input type="text" name="title" class="form-control" id="name">
                     </div>
-                </form>
-            </div>
-        </section>
+                    <div class="col-md-6 mb-3">
+                        <label for="eventUrl" class="form-label">Event url</label>
+                        <input type="url" name="eventUrl" class="form-control" id="eventUrl">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="text" name="startDate" class="form-control" id="startDate">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="startTime" class="form-label">Start Time</label>
+                        <input type="text" name="startTime" class="form-control" id="startTime">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="text" name="endDate" class="form-control" id="endDate">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="endTime" class="form-label">End Time</label>
+                        <input type="text" name="endTime" class="form-control" id="endTime">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="description" id="description" rows="4" class="form-control"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger" type="submit">Upload Event</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </main>
 
-<%- include('layouts/footer') -%>
-
+<%- include("layouts/footer") -%>
 </body>
 </html>

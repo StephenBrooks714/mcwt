@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<%- include("layouts/header") -%>
+<style>
+  .contact-bg {
+    background: linear-gradient(to bottom, rgba(121,9,28, 0.9), rgba(0, 0, 0, 0.5)),
+    url("https://wallpaperaccess.com/full/4061963.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+  }
+</style>
+<body style="background-color: black;">
+<header class="contact-bg">
+  <%- include("layouts/navbar") -%>
+  <section class="container">
+    <div class="row justify-content-center align-items-center text-center"
+         style="height: 30vh;">
+      <div class="col-lg-7">
+        <h1 class="mb-3 fw-bold">Contact Us</h1>
+      </div>
+    </div>
+  </section>
+</header>
+
+
+<main class="container my-5 py-5">
+  <div class="row justify-content-center align-items-center mb-6">
+    <div class="col-lg-10">
+      <h2 class="mb-3 fw-bold">The Community is Waiting To Hear From You!!!</h2>
+      <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+
+      <form action="">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea name="message" id="message" rows="5" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+          Subscribe To Our Newsletter
+          <input type="checkbox" name="subscribe_me" class="form-check-input" id="subscribe">
+        </div>
+        <div>
+          <button class="btn btn-danger">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<%- include("layouts/footer") -%>
+</body>
+</html>

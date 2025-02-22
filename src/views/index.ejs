@@ -1,164 +1,22 @@
 <!doctype html>
-<html lang="en">
-<%- include('layouts/header') -%>
-<body class="bg-red-gradient">
-
-<header class="home-bg mb-7">
-    <%- include('layouts/navBar2') -%>
-    <div class="container">
-        <section class="row align-items-center justify-content-center align-items-center">
-            <div class="col-lg-10">
-                <h1 class="cursive text-dark-red fadeInDown">Mom Can We Talk</h1>
-                <p class="text-white fadeInLeft delay-1 lead mb-2">
-                    We truly believe that IT TAKES A VILLAGE!! With the Community's support, we can make a meaningful impact on the lives of the youth in our community.
-                </p>
-                <p class="mb-3">
-                    <span class="h5 mr-3">Follow Us On:</span>
-                    <a href="https://www.youtube.com/watch?v=wRNsNgHHeQU" target="_blank" class="text-white mr-3">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://www.facebook.com/shitjustgotrealpod/" target="_blank" class="text-white mr-3">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </p>
-                <a href="https://app.frame.io/reviews/6ef12aca-2c21-4286-926c-8e0dd774f3ba/fcedca44-c9b6-45eb-a739-b5df89d872ed"
-                   target="_blank" class="btn fadeInUp delay-2 btn-danger">Listen To Our Show</a>
-            </div>
-        </section>
-    </div>
+<html lang="en" data-bs-theme="dark">
+<%- include("layouts/header") -%>
+<body style="background-color: black;">
+<header class="section">
+  <%- include("layouts/navbar") -%>
+  <%- include("partials/home/intro") -%>
 </header>
 <main>
-    <div class="container my-5">
-        <div class="row mb-7 flex-row-reverse justify-content-center">
-            <div class="col-lg-7 mb-3">
-                <h3 class="h1 mb-2">Taking it to the next level</h3>
-                <p class="mb-2 h6">
-                    If you or someone you know are willing to telling their story please Let's Talk About It! Let your healing process start here! I pray that your story will resonate with a young adult. At these "Mom Can We Talk" Events we provide local resources & mental health therapists for your convenience. We also highlight our young entrepreneurs. Please keep an eye out for our upcoming events.
-                </p>
-                <a href="#contact" class="btn btn-outline-light">Let's Talk About It</a>
-            </div>
-            <div class="col-lg-5 mb-3">
-                <img src="/assets/img_5836.jpg" class="img-fluid rounded shadow-lg" alt="image">
-            </div>
-        </div>
-        <div class="row mb-7 justify-content-center">
-            <div class="col-lg-3 mb-3">
-                <img src="/assets/img_6274.jpg" class="img-fluid rounded shadow-lg" alt="gallery image" />
-            </div>
-            <div class="col-lg-3 mb-3">
-                <img src="/assets/img_1491.jpg" class="img-fluid rounded shadow-lg" alt="gallery image" />
-            </div>
-            <div class="col-lg-3 mb-3">
-                <img src="/assets/img_3315.jpg" class="img-fluid rounded shadow-lg" alt="gallery image" />
-            </div>
-            <div class="col-lg-3 mb-3">
-                <img src="/assets/img_6258.jpg" class="img-fluid rounded shadow-lg" alt="gallery image" />
-            </div>
-        </div>
-    </div>
-    <section class="banner mb-7">
-        <div class="container-fluid">
-            <div class="row justify-content-center text-center align-items-center">
-                <div class="col-lg-3 hover-zoom col-md-6 mb-3">
-                    <h4 class="h5">Soulmine</h4>
-                    <a href="https://www.facebook.com/profile.php?id=100090814104807" target="_blank">
-                        <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-1/335317648_1593731051110155_5992146525617537676_n.jpg?stp=c446.0.1156.1156a_dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=fIQKWfcvJuQQ7kNvgF9gQ9m&_nc_zt=24&_nc_ht=scontent-dfw5-2.xx&_nc_gid=AEH_JkHHMD2Pl8tFcFt5ieB&oh=00_AYBZ-CwtHg8M6qmFVg8j45qPvh253zrogducTOBihjpeUQ&oe=677E0874"
-                             class="w-50 h-25" alt="img">
-                    </a>
-                    <p class="card-text">
-                        Providing Mental Health Therapists for events.
-                    </p>
-                </div>
-                <div class="col-lg-3 hover-zoom col-md-6 mb-3">
-                    <h4 class="h5">D.A.C.</h4>
-                    <a href="https://www.dadsagainstcrime.org/" target="_blank">
-                        <img src="https://images.squarespace-cdn.com/content/v1/650b3abd7bbe08247247e5c8/09d133cb-fc0c-4234-aa80-1abe59e3dbcf/logo+dads-01.png?format=1500w"
-                             class="h-25 w-50" alt="img">
-                    </a>
-                    <p class="card-text">
-                        Provides resources to support Mom Can We Talk.
-                    </p>
-                </div>
-                <div class="col-lg-3 hover-zoom col-md-6 mb-3">
-                    <h4 class="h5">Shh Just Got Real</h4>
-                    <a href="https://www.facebook.com/shitjustgotrealpod/about" target="_blank">
-                        <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-1/286172794_355433170006619_8998947620350417252_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=FHN0wMXnWuwQ7kNvgF1GLes&_nc_zt=24&_nc_ht=scontent-dfw5-2.xx&_nc_gid=A6WqX2n2qMBC0cUNbu7mIYm&oh=00_AYD0wlxGY9bMTVXuXMFKNBerOXbYgAWYcKOqpfiTUyDvTA&oe=677DE4DD"
-                             class="w-50 h-25" alt="img">
-                    </a>
-                    <p class="card-text">
-                        The Host of this Podcast Host & Support MCWT
-                    </p>
-                </div>
-                <div class="col-lg-3 hover-zoom col-md-6 mb-3">
-                    <h4 class="h5">Chicken 'n' Pickle</h4>
-                    <a href="https://chickennpickle.com/location/st-charles/" target="_blank">
-                        <img src="https://chickennpickle.com/wp-content/uploads/2023/01/Full-Color_Locations-STC-1.svg" class="h-25 w-75" alt="img">
-                    </a>
-                    <p class="card-text">
-                        Expanding their Community Involvement w/MCWT
-                    </p>
-                    <div id="contact"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="container my-4">
-        <% if(eventsData != "") { %>
-        <div class="row justify-content-center mb-6">
-            <% for(i=0; i < eventsData.length; i++) { %>
-                <div class="col-lg-7 mb-3">
-                    <h4 class="card-title mb-3"><%= eventsData[i].title %>
-                        <% if(loggedIn) { %>
-                            <a href="/delete/event/<%= eventsData[i]._id %>" class="btn btn-floating btn-warning">
-                                <i class="far fa-trash-can"></i>
-                            </a>
-                        <% } %>
-                    </h4>
-                    <p class="mb-3 card-text"><%= eventsData[i].description.substring(0, 140) %></p>
-                    <p class="mb-3 card-footer">
-                        <strong>Start Date</strong> <%= eventsData[i].startDate %> on <%= eventsData[i].startTime %>
-                        <br>
-                        <strong>End Date</strong> <%= eventsData[i].endDate %> on <%= eventsData[i].endTime %>
-                    </p>
-                    <a href="/events" class="btn btn-primary" target="_blank">
-                        Learn More
-                    </a>
-                    <a href="/events" class="btn btn-outline-info">Previous Events</a>
-                </div>
-                <div class="col-lg-5 mb-3">
-                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="events">
-                </div>
-            <% } %>
-        </div>
-        <% } %>
-        <div id="contact"></div>
-        <div class="row mb-6 justify-content-center">
-            <div class="col-lg-6 mb-2">
-                <h5 class="h1 mb-2">What Makes Us Different</h5>
-                <p class="mb-2 h6">
-                    By creating this space for open dialogue, connection, and community support, these events can spark change in the lives of the youth, helping them to find their voices and realize that there is always help available. The ultimate goal is to help them feel less isolated and more empowered to face their challenges, knowing they are supported by a village of caring adults and peers.
-                </p>
-            </div>
-            <div class="col-lg-6 mb-2">
-                <ul class="list-group-items">
-                    <li class="list-item">
-                        <i class="fa-solid fa-check-double"></i> Listen to our podcast for more news.
-                    </li>
-                    <li class="list-item">
-                        <i class="fa-solid fa-check-double"></i> Help our organizational growth with Square.
-                    </li>
-                    <li class="list-item">
-                        <i class="fa-solid fa-check-double"></i> Stay up-to-date with the latest news.
-                    </li>
-                </ul>
-                <a href="mailto:shhjustgotreal@gmail.com" class="btn me-2 btn-outline-light">Contact MCWT</a>
-                <a href="mailto:stephenbrooks714@gmail.com" class="btn btn-outline-light">Support</a>
-            </div>
-        </div>
-    </div>
+  <section class="container my-5 py-4">
+    <%- include("partials/home/articles") -%>
+    <%- include("partials/home/sponsors") -%>
+  </section>
 </main>
 
-<%- include('layouts/footer') -%>
-
+<%- include("layouts/footer") -%>
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.umd.min.js"
+></script>
 </body>
 </html>

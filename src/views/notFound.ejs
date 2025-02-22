@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<%- include('layouts/header') -%>
-<body class="bg-red-gradient">
-<header>
-    <%- include('layouts/navBar2') -%>
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<%- include("layouts/header") -%>
+<body style="background-color: black;">
+<header class="contact-bg">
+    <%- include("layouts/navbar") -%>
 </header>
 
-<main class="container ">
-    <div class="row justify-content-center align-items-center text-center" style="height: 100vh;">
+<main class="container mb-5 pb-5">
+    <div class="row justify-content-center align-items-center text-center"
+         style="height: 50vh;">
         <div class="col-lg-8">
             <img src="http://www.natun-barta.com/images/page-not-found.png"
                  class="img-fluid"
@@ -16,8 +17,6 @@
     </div>
 </main>
 
-<%- include('layouts/footer') -%>
-
-<!-- MDB -->
+<%- include("layouts/footer") -%>
 </body>
 </html>

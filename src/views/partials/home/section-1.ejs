@@ -1,0 +1,49 @@
+<div class="row mb-1 pt-4 align-items-center flex-row-reverse justify-content-center">
+    <div class="col-lg-6 mb-3">
+        <p class="display-2 fw-bold mb-3">You Can Help</p>
+        <p class="lead">
+            We're sponsored by local small businesses in the community, and we're looking for more sponsors to help us continue to provide free and low-cost services to the community. If you're interested in becoming a sponsor, please contact
+            <a href="/contact">us today</a>.
+        </p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                Attend live events in-person or in virtual, share your story, and meet the people we serve.
+                <ul>
+                    <% if(events != "") { %>
+                        <% for(i=0; i < events.length; i++) { %>
+                            <li>
+                                <p class="h6">
+                                    <a href="/events">
+                                        <%= events[i].title %>
+                                    </a>
+                                </p>
+                                <p>
+                                <%= events[i].startDate %> at <%= events[i].startTime %>
+                                </p>
+                            </li>
+                        <% } %>
+                    <% } else { %>
+                        <li>
+                          No event are currently happening now, please stay tuned or contact us.
+                        </li>
+                    <% } %>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <a href="/events">Explore</a> our previous events on our events page and listen to our previous podcast episodes.
+                <ul>
+                    <li>
+                        Recordings are conducted in Missouri
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                Want to get on one of our shows? <a href="/contact">Contact</a> us to get a day and time set up.
+            </li>
+        </ul>
+    </div>
+    <div class="col-lg-6 mb-3">
+        <img src="/images/img_1491.jpg"
+             class="img-fluid" alt="img">
+    </div>
+</div>
