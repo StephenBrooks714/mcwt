@@ -45,7 +45,7 @@ let auth = require("./middleware/ifAdminUser");
 router.get('/', cache(2), homeController);
 router.get("/about", cache(2), aboutController);
 // users
-router.get('/register', registerController);
+router.get('/register', auth, registerController);
 router.post('/store/user', storeUserController);
 router.get('/login', loginController);
 router.post('/login/user', loginUserController);
